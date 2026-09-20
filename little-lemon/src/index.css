@@ -1,0 +1,216 @@
+:root {
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --secondary-peach: #EE9972;
+  --light-bg: #EDEFEE;
+  --dark-text: #333333;
+  --error-color: #D32F2F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+}
+
+/* Header & Nav */
+.app-header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
+}
+
+.app-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.app-nav a {
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: 700;
+}
+
+.app-nav a:hover, .app-nav a:focus {
+  color: var(--primary-green);
+  outline: 2px solid var(--primary-green);
+}
+
+/* Hero Section */
+.booking-hero {
+  background-color: var(--primary-green);
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.booking-hero h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 3.5rem;
+  color: var(--primary-yellow);
+  margin: 0;
+}
+
+.booking-hero h2 {
+  margin-top: -0.5rem;
+  font-weight: 400;
+}
+
+/* Form Layout */
+.booking-content {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+}
+
+.booking-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+input, select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: 2px solid var(--primary-green);
+}
+
+.required-star {
+  color: var(--error-color);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--primary-yellow);
+  color: var(--dark-text);
+  border: none;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #e2bd0f;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Confirmation Screen */
+.confirmation-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.confirmation-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.icon-success {
+  font-size: 3rem;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: var(--primary-yellow);
+  color: var(--dark-text);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Footer Styling */
+.app-footer {
+  background-color: #333333;
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footer-content a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .app-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
